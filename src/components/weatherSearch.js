@@ -2,8 +2,9 @@ import React from "react";
 import { View, Button, StyleSheet } from "react-native";
 import CustomTextInput from "./customTextInput";
 
-export default function WeatherSearch({searchWeather}) {
+export default function WeatherSearch({ searchWeather }) {
   const [location, setLocation] = React.useState("");
+
   return (
     <View>
       <CustomTextInput
@@ -13,7 +14,7 @@ export default function WeatherSearch({searchWeather}) {
         onChange={setLocation}
       />
       <View style={styles.buttonWrapper}>
-        <Button title="Search" onPress={() => searchWeather(location)} />
+        <Button title="Search" onPress={()=>{searchWeather(location)}} />
       </View>
     </View>
   );
